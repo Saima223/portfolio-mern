@@ -1,16 +1,21 @@
-# Dependencies
+# Node modules
 node_modules/
 
 # Environment variables
 .env
 
-# IDE/Editor files
+# Logs
+logs/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build files (React)
+client/build/
+
+# IDE or editor-specific files
 .vscode/
 .idea/
-
-# Build files
-build/
-dist/
-
-# Logs
-*.log
+*.iml
