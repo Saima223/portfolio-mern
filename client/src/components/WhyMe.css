@@ -1,0 +1,35 @@
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.why-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.why-card:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.why-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.why-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
