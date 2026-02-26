@@ -1,11 +1,31 @@
-import React from "react";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import WhyMe from './components/WhyMe';
+import Services from './components/Services';
+import Results from './components/Portfolio';
+import Testimonials from './components/Testimonials';
+import Process from './components/Process';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Welcome to My Portfolio</h1>
+    <div className="App">
+      <Navbar />
+      <main>
+        <Hero />
+        <WhyMe />
+        <Services />
+        <Results />
+        <Testimonials />
+        <Process />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;
