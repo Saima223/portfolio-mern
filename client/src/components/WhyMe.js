@@ -2,37 +2,47 @@ import React from 'react';
 import './WhyMe.css';
 
 const WhyMe = () => {
+  const reasons = [
+    {
+      title: "Fast Turnaround",
+      desc: "Launch your new site in as little as 14 days, not months."
+    },
+    {
+      title: "Clear Communication",
+      desc: "I speak your language, not \"code.\" You'll always know what's happening."
+    },
+    {
+      title: "Affordable Pricing",
+      desc: "Professional results without the big agency price tag."
+    },
+    {
+      title: "Long-term Support",
+      desc: "I don't just build and leave. I'm here to help you grow."
+    },
+    {
+      title: "Easy Process",
+      desc: "I handle the hard stuff so you can focus on running your business."
+    }
+  ];
+
   return (
     <section className="section" id="why-me">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Why Business Owners <span className="text-gradient">Choose Me</span></h2>
+          <h2 className="section-title">Why Business Owners <span className="text-gradient">Trust Me</span></h2>
           <p className="section-subtitle">
-            I'm not just a developer. I'm a partner who cares about your business growth.
+            I'm a partner who cares about your business growth, not just another freelancer.
           </p>
         </div>
 
         <div className="why-grid">
-          <div className="why-card">
-            <div className="why-icon">🚀</div>
-            <h3>Fast Delivery</h3>
-            <p>I respect your time. Most projects are delivered within 2 weeks, so you can launch sooner.</p>
-          </div>
-          <div className="why-card">
-            <div className="why-icon">💎</div>
-            <h3>Premium Quality</h3>
-            <p>I don't use cheap templates. Every design is custom-built to match your brand and goals.</p>
-          </div>
-          <div className="why-card">
-            <div className="why-icon">🤝</div>
-            <h3>Clear Communication</h3>
-            <p>No tech jargon. I explain everything in plain English so you're always in the loop.</p>
-          </div>
-          <div className="why-card">
-            <div className="why-icon">📈</div>
-            <h3>Results Focused</h3>
-            <p>A pretty website is useless if it doesn't sell. I build with conversion in mind.</p>
-          </div>
+          {reasons.map((item, index) => (
+            <div className="why-card" key={index}>
+              <div className="check-circle">✓</div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

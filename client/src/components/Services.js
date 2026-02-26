@@ -2,24 +2,39 @@ import React from 'react';
 import './Services.css';
 
 const Services = () => {
-  const services = [
+  const packages = [
     {
-      title: "Landing Page",
-      description: "Perfect for products, apps, or capturing leads. High-conversion design focused on a single goal.",
+      name: "The Starter",
       price: "Starting at $500",
-      features: ["Custom Design", "Mobile Responsive", "Speed Optimized", "SEO Basics"]
+      features: [
+        "1 High-Converting Page",
+        "Mobile Ready & Fast Loading",
+        "Secure Contact Form",
+        "Basic SEO Setup"
+      ],
+      for: "New businesses needing a professional look fast."
     },
     {
-      title: "Business Website",
-      description: "A complete 5-page website to showcase your business, services, and build credibility.",
+      name: "The Business",
       price: "Starting at $1,200",
-      features: ["Home, About, Services, Contact", "CMS Integration", "Google Maps & Analytics", "Contact Form"]
+      features: [
+        "Up to 5 Professional Pages",
+        "Google Maps & Analytics",
+        "Search Engine Optimization",
+        "Easy-to-Update System"
+      ],
+      for: "Companies looking to beat competition & build trust."
     },
     {
-      title: "E-commerce Store",
-      description: "Sell your products online with a secure, easy-to-manage online store.",
+      name: "The Premium",
       price: "Starting at $2,500",
-      features: ["Product Management", "Payment Gateway", "Inventory System", "User Accounts"]
+      features: [
+        "Full Online Store",
+        "Secure Payment Integration",
+        "Advanced Custom Design",
+        "Priority 24/7 Support"
+      ],
+      for: "Established brands ready to sell online & scale."
     }
   ];
 
@@ -27,28 +42,29 @@ const Services = () => {
     <section className="section" id="services">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Simple, Transparent <span className="text-gradient">Services</span></h2>
+          <h2 className="section-title">Simple, Transparent <span className="text-gradient">Pricing</span></h2>
           <p className="section-subtitle">
-            Everything you need to succeed online, without the confusion. Choose the package that fits your stage.
+            Choose the package that fits your business stage. No hidden fees, just professional results.
           </p>
         </div>
         
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div className="service-card" key={index}>
+          {packages.map((pkg, index) => (
+            <div className={`service-card ${index === 1 ? 'featured' : ''}`} key={index}>
+              {index === 1 && <span className="featured-badge">Most Popular</span>}
               <div className="service-content">
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <div className="service-price">{service.price}</div>
+                <h3 className="service-name">{pkg.name}</h3>
+                <div className="service-price">{pkg.price}</div>
+                <p className="service-for">{pkg.for}</p>
                 <ul className="service-features">
-                  {service.features.map((feature, idx) => (
+                  {pkg.features.map((feature, idx) => (
                     <li key={idx}>
                       <span className="check-icon">✓</span> {feature}
                     </li>
                   ))}
                 </ul>
               </div>
-              <a href="#contact" className="btn btn-secondary service-btn">Get Started</a>
+              <a href="mailto:saima.sidd223@gmail.com?subject=Request for responsive frontend website" className="btn btn-secondary service-btn">Get Started</a>
             </div>
           ))}
         </div>

@@ -17,14 +17,15 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="logo">
-          YourName<span className="dot">.</span>
+          Saima<span className="dot">.</span>
         </a>
         
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#portfolio" onClick={() => setIsOpen(false)}>Work</a>
           <a href="#why-me" onClick={() => setIsOpen(false)}>Why Me</a>
-          <a href="#contact" className="nav-btn" onClick={() => setIsOpen(false)}>Book Call</a>
+          <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#portfolio" onClick={() => setIsOpen(false)}>Results</a>
+          <a href="#process" onClick={() => setIsOpen(false)}>Process</a>
+          <a href="https://calendly.com/saima-sidd223" target="_blank" rel="noopener noreferrer" className="nav-btn" onClick={() => setIsOpen(false)}>Book Call</a>
         </div>
 
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>

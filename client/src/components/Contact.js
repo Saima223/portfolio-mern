@@ -4,16 +4,17 @@ import './Contact.css';
 const Contact = () => {
   return (
     <section className="section contact-section" id="contact">
-      <div className="container contact-container">
-        <div className="contact-content">
-          <h2 className="contact-title">Ready to Grow Your Business?</h2>
+      <div className="container">
+        <div className="contact-card animate-fade-in">
+          <h2 className="contact-title">Stop Losing Customers to a Bad Website</h2>
           <p className="contact-subtitle">
-            Let's build a website that works as hard as you do. Book a free 15-minute discovery call.
+            Your competitors are already online. Let's make sure you look better and sell more. Book your free 15-minute strategy call today.
           </p>
           <div className="contact-actions">
-            <a href="mailto:your@email.com" className="btn btn-primary btn-glow">Book a Free Call</a>
-            <a href="mailto:your@email.com" className="btn btn-secondary">Send an Email</a>
+            <a href="https://calendly.com/saima-sidd223" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-glow">Book Free Call</a>
+            <a href="mailto:saima.sidd223@gmail.com?subject=Request for responsive frontend website" className="btn btn-secondary">Get a Quote</a>
           </div>
+          <p className="contact-footer-note">No obligation. Just expert advice on how to grow your business.</p>
         </div>
       </div>
     </section>

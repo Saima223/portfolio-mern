@@ -1,28 +1,28 @@
 import React from 'react';
 import './Portfolio.css';
 
-const Portfolio = () => {
-  const projects = [
+const Results = () => {
+  const cases = [
     {
-      title: "FinTech Dashboard",
-      category: "Web App",
-      description: "A modern dashboard for a financial startup helping users track expenses.",
-      tags: ["React", "Dashboard", "Finance"],
-      image: "https://via.placeholder.com/600x400/1c1c1c/333333?text=Project+1"
+      title: "Maharashtra Plast",
+      problem: "A local manufacturing business needed to showcase their PVC and LD beading solutions to industrial clients.",
+      solution: "A professional, clean business website highlighting their 25+ years of excellence and ISO certification.",
+      result: "Established a strong online presence and simplified client trust for large-scale industrial orders.",
+      link: "https://maharashtra-plast.surge.sh/"
     },
     {
-      title: "Coffee Shop Brand",
-      category: "Website",
-      description: "A warm, inviting website for a local coffee chain to drive foot traffic.",
-      tags: ["Design", "Branding", "Local SEO"],
-      image: "https://via.placeholder.com/600x400/1c1c1c/333333?text=Project+2"
+      title: "Vibe Coding (Excuse Generator)",
+      problem: "A fun, interactive tool was needed to demonstrate creative frontend logic and user interaction.",
+      solution: "A sleek, responsive web app that generates believable excuses across various categories.",
+      result: "High user engagement with a focus on seamless mobile experience and modern UI aesthetics.",
+      link: "https://vibe-codingg.vercel.app/"
     },
     {
-      title: "E-commerce Redesign",
-      category: "E-commerce",
-      description: "Redesigned an online store to improve checkout flow and increase sales by 40%.",
-      tags: ["Shopify", "UX/UI", "Conversion"],
-      image: "https://via.placeholder.com/600x400/1c1c1c/333333?text=Project+3"
+      title: "Professional Portfolio (Messy Reaction)",
+      problem: "A developer needed a platform to showcase their journey, skills, and visual storytelling capabilities.",
+      solution: "A comprehensive portfolio site built with technical precision and creative insight, focusing on full-stack mastery.",
+      result: "Successfully built a personal brand that connects technical skills with creative storytelling.",
+      link: "https://messy-reaction.surge.sh/"
     }
   ];
 
@@ -30,32 +30,34 @@ const Portfolio = () => {
     <section className="section" id="portfolio">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Recent <span className="text-gradient">Success Stories</span></h2>
+          <h2 className="section-title">Real <span className="text-gradient">Business Results</span></h2>
           <p className="section-subtitle">
-            I don't just build websites; I build business assets. Here are a few recent projects.
+            I don't just build websites. I build assets that solve problems and drive growth.
           </p>
         </div>
 
-        <div className="portfolio-grid">
-          {projects.map((project, index) => (
-            <article className="project-card" key={index}>
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <a href="#contact" className="btn btn-primary">View Case Study</a>
+        <div className="results-grid">
+          {cases.map((item, index) => (
+            <div className="result-card" key={index}>
+              <h3 className="result-title">{item.title}</h3>
+              <div className="result-body">
+                <div className="result-point">
+                  <strong>The Problem:</strong>
+                  <p>{item.problem}</p>
+                </div>
+                <div className="result-point">
+                  <strong>The Solution:</strong>
+                  <p>{item.solution}</p>
+                </div>
+                <div className="result-point outcome">
+                  <strong>The Result:</strong>
+                  <p className="text-gradient">{item.result}</p>
                 </div>
               </div>
-              <div className="project-content">
-                <span className="project-category">{project.category}</span>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag, idx) => (
-                    <span key={idx} className="project-tag">{tag}</span>
-                  ))}
-                </div>
+              <div className="result-actions" style={{ marginTop: '2rem' }}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: '100%' }}>View Live Project</a>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -63,4 +65,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Results;

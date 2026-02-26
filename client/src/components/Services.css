@@ -1,63 +1,93 @@
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
+.service-card.featured {
   border-color: var(--accent-primary);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, #1c1c1c, #111);
+  box-shadow: 0 20px 40px -20px rgba(99, 102, 241, 0.3);
+  transform: scale(1.02);
 }
 
-.service-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.service-name {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
-.service-description {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
 .service-price {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-for {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 .service-features {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .service-features li {
   display: flex;
   align-items: center;
-  margin-bottom: 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
 }
 
 .check-icon {
   color: var(--accent-primary);
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   font-weight: bold;
 }
 
 .service-btn {
   width: 100%;
+}
+
+.service-card.featured .service-btn {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .service-card.featured {
+    transform: none;
+  }
 }

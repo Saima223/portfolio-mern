@@ -6,20 +6,20 @@ const Hero = () => {
     <section className="hero" id="home">
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <span className="hero-badge">Available for new projects</span>
+          <div className="hero-trust-badges">
+            <span className="trust-badge">✓ Fast 2-Week Delivery</span>
+            <span className="trust-badge">✓ Affordable Fixed Pricing</span>
+            <span className="trust-badge">✓ 100% Reliable Support</span>
+          </div>
           <h1 className="hero-title">
-            Turn Your Website Into Your <span className="text-gradient">Best Salesperson</span>
+            I Build Websites That Get You <span className="text-gradient">More Customers</span>
           </h1>
           <p className="hero-subtitle">
-            I help small businesses and startups build professional, high-converting websites that attract customers and build trust. No technical jargon, just results.
+            Stop losing sales to a confusing website. I design professional, high-converting sites for small businesses and startups that build trust and drive results.
           </p>
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary btn-glow">Get a Free Quote</a>
-            <a href="#portfolio" className="btn btn-secondary">View My Work</a>
-          </div>
-          <div className="hero-social-proof">
-            <p>Trusted by 20+ small businesses</p>
-            {/* Add small logos or avatars here if available */}
+            <a href="mailto:saima.sidd223@gmail.com?subject=Request for responsive frontend website" className="btn btn-primary btn-glow">Get a Quote</a>
+            <a href="https://calendly.com/saima-sidd223" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Book a Free Call</a>
           </div>
         </div>
       </div>
