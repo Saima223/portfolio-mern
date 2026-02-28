@@ -19,7 +19,6 @@ const Hero = () => {
           </p>
           <div className="hero-actions">
             <a href="mailto:saima.sidd223@gmail.com?subject=Request for responsive frontend website" className="btn btn-primary btn-glow">Get a Quote</a>
-            <a href="https://calendly.com/saima-sidd223" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Book a Free Call</a>
           </div>
         </div>
       </div>
