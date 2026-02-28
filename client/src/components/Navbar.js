@@ -25,7 +25,7 @@ const Navbar = () => {
           <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
           <a href="#portfolio" onClick={() => setIsOpen(false)}>Results</a>
           <a href="#process" onClick={() => setIsOpen(false)}>Process</a>
-          <a href="https://calendly.com/saima-sidd223" target="_blank" rel="noopener noreferrer" className="nav-btn" onClick={() => setIsOpen(false)}>Book Call</a>
+          <a href="mailto:saima.sidd223@gmail.com?subject=Request for responsive frontend website" className="nav-btn" onClick={() => setIsOpen(false)}>Get a Quote</a>
         </div>
 
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
